@@ -1,0 +1,13 @@
+# ARIS V10.1 Artifact Checksums
+# Generated at: 2026-09-21T18:13:33.049459Z
+
+## Base Model: unsloth/Qwen2.5-1.5B-Instruct
+Revision: 3d254dbee5e3beae81bb8a717ad3a03427a09d26
+c9356b525f046733053fa910242a9edffb3b311d03effbd5d3f2e2ce81d1dcd1  model.safetensors
+9c5ae00e602b8860cbd784ba82a8aa14e8feecec692e7076590d014d7b7fdafa  tokenizer.json
+
+## Adapter
+b5500b5603e79d055eb1baafc9d1cf4c234c2378cba9d8478ea4de974a677832  adapter_model.safetensors
+
+## Final GGUF
+7bb937b04bdac3002f024b97dae274458486e686f70903dc21b0d8dae3e0b43b  qwen2.5-1.5b-instruct.Q4_K_M.gguf

@@ -1,0 +1,41 @@
+{
+  "project": "ARIS V10.1",
+  "base_model": {
+    "repo": "unsloth/Qwen2.5-1.5B-Instruct",
+    "loaded_repo": "unsloth/qwen2.5-1.5b-instruct-unsloth-bnb-4bit",
+    "revision": "3d254dbee5e3beae81bb8a717ad3a03427a09d26",
+    "files": {
+      "model.safetensors": "c9356b525f046733053fa910242a9edffb3b311d03effbd5d3f2e2ce81d1dcd1",
+      "tokenizer.json": "9c5ae00e602b8860cbd784ba82a8aa14e8feecec692e7076590d014d7b7fdafa"
+    }
+  },
+  "fine_tuning": {
+    "method": "QLoRA",
+    "rank": 64,
+    "alpha": 128,
+    "dropout": 0.0,
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ]
+  },
+  "dataset": {
+    "name": "ARIS_V10_FINAL_DATASET_V5.jsonl",
+    "records": 2448,
+    "sha256": "ff2c69abdf3eac9c7749cc4e3dfa107e5a18d1a53accbe975cf78bd016aed966"
+  },
+  "validation": {
+    "name": "ARIS_V10_VAL_DATASET.jsonl",
+    "records": 204,
+    "sha256": "3a898c9c8170397db4b3ab4325b2c574afaca84babe780f2df68db6b9dbbc8ab"
+  },
+  "artifacts": {
+    "adapter": "b5500b5603e79d055eb1baafc9d1cf4c234c2378cba9d8478ea4de974a677832",
+    "gguf": "7bb937b04bdac3002f024b97dae274458486e686f70903dc21b0d8dae3e0b43b"
+  }
+}

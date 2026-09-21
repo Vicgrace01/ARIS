@@ -1,0 +1,152 @@
+[
+  {
+    "prompt": "What spacing should I use for cassava in southern Nigeria?",
+    "aris": "Use about 1 m between rows and 0.5 m within rows, giving approximately 20,000 stands per hectare.",
+    "base": "In southern Nigeria, when planting cassava, it's important to maintain adequate space between rows to allow for proper growth and yield. Typically, a recommended spacing of about 1 meter by 0.8 meters is advisable. This configuration helps in maximizing sunlight exposure and nutrient uptake while ensuring that plants can grow healthily without overcrowding. Remember, this information might vary slightly depending on local conditions, so always consider consulting your local agricultural extension officer if you're unsure."
+  },
+  {
+    "prompt": "How do I prepare yam setts for planting?",
+    "aris": "Cure them at about 27-30°C and 75-85% relative humidity for 4-7 days before planting.",
+    "base": "To prepare yam setts for planting, follow these steps:\n\n1. **Soak the Setts**: Place the yam setts in a container filled with water for about 24 hours. This helps soften the tuber and makes it easier to remove the skin.\n\n2. **Remove the Skin**: Carefully peel off the outer layer of the yam sett using your fingers or a knife. The skin should be easily removed due to its soft texture after soaking.\n\n3. **Cut the Tuber**: Cut the yam sett into smaller pieces, typically around 5 cm in length. This is done to ensure that each piece has enough energy reserves to grow into a healthy plant.\n\n4. **Prepare the Soil**: Choose a well-draining, fertile soil rich in organic matter. Mix in some compost or manure to improve the soil's nutrient content.\n\n5. **Planting Depth**: Plant the cuttings at a depth of approximately 10 cm below the surface. Ensure that the roots are not buried too deep; this will help them absorb more oxygen and nutrients.\n\n6. **Watering**: After planting, water the area gently but thoroughly. Watering helps settle the soil around the roots and encourages root growth.\n\n7"
+  },
+  {
+    "prompt": "What is the best time to plant maize in the Middle Belt?",
+    "aris": "That depends on your zone. Is it the Middle Belt, where rainfall drives fertility and drought tolerance, or the Northern Guinea-Coxi Zone, where moisture control matters more?",
+    "base": "The best time to plant maize in the Middle Belt of Nigeria depends on several factors including rainfall patterns, temperature, and soil conditions. Generally, planting should be done when there's sufficient moisture in the soil but before the onset of heavy rains. This typically occurs between late March and early April, which aligns well with the rainy season that follows. However, specific dates can vary based on local climatic conditions. For precise advice tailored to your area, it would be beneficial to consult with your local Agricultural Development Officer (ADP) who has detailed knowledge of your region's growing seasons."
+  },
+  {
+    "prompt": "Explain the difference between CMD and CBSD.",
+    "aris": "CMD is caused by begomoviruses and causes yellowing, chlorotic streaks, and stunting on leaves. CBSD is caused by geminiviruses and causes dry brown leaf spots and stunting.",
+    "base": "CMD stands for Community Managed Drought Response System, while CBSD is Community-Based Drought Surveillance. Both systems aim to help communities prepare for and cope with droughts by providing information on water availability and encouraging community action. However, CBSD focuses more on surveillance and early warning, whereas CMD involves direct management of resources during a drought."
+  },
+  {
+    "prompt": "How many cassava plants fit in one hectare at 1 m x 1 m?",
+    "aris": "Approximately 10,000 planting positions.",
+    "base": "A. 1000000"
+  },
+  {
+    "prompt": "What causes groundnut rosette?",
+    "aris": "Groundnut Rosette Disease is caused by two viruses: Groundnut Rosette Virus (GRSV) and Groundnut Rosette Associated Virus (GRaV). It is transmitted persistently by the aphid Aphis craccivora, which feeds on plant sap.",
+    "base": "Groundnut rosette is caused by a virus called *Turnip mosaic virus* (TuMV). This disease can affect groundnuts, also known as peanuts, causing stunted growth and reduced yield."
+  },
+  {
+    "prompt": "Why do farmers make yam mounds?",
+    "aris": "Mounding raises the tuber above wet soils during heavy rains, reduces fungal root rot, and improves drainage. It is part of conventional ware yam production.",
+    "base": "Farmers make yam mounds primarily for two main reasons:\n\n1. **Water Management**: The raised structure helps retain water during the dry season when it's scarce. This is crucial because yams require consistent moisture levels throughout their growth period.\n\n2. **Aeration**: By creating a mound, the roots of the yam plants can better penetrate the soil, allowing them to absorb more nutrients and water. This also aids in preventing soil compaction, which would otherwise hinder root penetration.\n\nThese practices help ensure that the yams receive adequate water and oxygen, leading to healthier plants and higher yields. Farmers often use this method across various parts of Nigeria where rainfall patterns might be unpredictable or insufficient."
+  },
+  {
+    "prompt": "What are the signs of a healthy cassava stem cutting?",
+    "aris": "A healthy cassava stem cutting should be firm, plump, and show no wounds or rot.",
+    "base": "A healthy cassava stem cutting should exhibit several characteristics:\n\n1. **Stem Color**: The stem should be greenish-white or light green, indicating good health.\n2. **Leaf Condition**: The leaves should be fresh, dark green, and well-developed. They should also be free from any yellowing or browning spots.\n3. **Root Development**: The roots should be visible and growing freely from the base of the stem. They should be white or slightly pinkish in color, indicating that the plant is actively absorbing nutrients.\n4. **Growth Rate**: The cutting should grow at a moderate rate, showing consistent growth over time.\n5. **No Pest Infestation**: There should be no signs of pests like caterpillars or other insects on the cutting.\n6. **Soil Health**: Ensure the cutting is placed in fertile, well-draining soil rich in organic matter. This will help in promoting healthy root development and overall plant growth.\n\nIf these conditions are met, it indicates that the cutting is likely to thrive and produce a healthy crop."
+  },
+  {
+    "prompt": "How do I store maize after harvest without aflatoxin?",
+    "aris": "Dry it to below 10-13% moisture before storage. Store in a dry, well-ventilated structure such as a silo or on top of river sand. Aflasafe is not a grain treatment — use clean seed next season instead.",
+    "base": "To store maize safely without aflatoxin contamination, follow these steps:\n\n1. **Dry the Maize**: After harvesting, allow the maize to dry completely before storing it. This helps reduce moisture levels that can promote fungal growth.\n\n2. **Store Properly**: Store the dried maize in a cool, dark place away from direct sunlight. A basement or attic is ideal because of its cooler temperatures and lack of light.\n\n3. **Use Proper Containers**: Use clean, airtight containers like plastic bins or bags. Avoid using open containers as they can attract pests.\n\n4. **Monitor Temperature and Humidity**: Keep an eye on the temperature and humidity inside your storage area. High humidity and warm conditions can encourage mold growth.\n\n5. **Rotate Storage Areas**: Rotate the stored maize regularly to ensure that older batches are used first, reducing the risk of spoilage due to exposure to air.\n\nBy following these steps, you can help prevent aflatoxin contamination and extend the shelf life of your harvested maize."
+  },
+  {
+    "prompt": "What is roguing in cassava production?",
+    "aris": "Roguing is the manual removal of infected plants before harvest. It is part of integrated management against Cassava Mosaic Disease (CMD).",
+    "base": "Roguing in cassava production refers to the practice of removing diseased or unhealthy plants from the field. This method helps control diseases by reducing the spread of pathogens within the crop. It involves physically removing infected plants to prevent them from infecting healthy ones. Roguing can be done manually or using mechanical tools like hoes or rakes. The goal is to maintain a healthy plant population that can resist disease and pests effectively."
+  },
+  {
+    "prompt": "My cow is not eating. What should I check first?",
+    "aris": "Check her temperature, appetite, water intake, rumen movement, and any visible signs of illness. These can help identify common causes before you call a vet.",
+    "base": "A. Check if she has enough water."
+  },
+  {
+    "prompt": "How often should I feed a penned goat?",
+    "aris": "Feed twice daily at fixed times during the day.",
+    "base": "A penned goat needs to be fed regularly throughout the day. Typically, goats can be fed twice daily, around morning and evening, but this might vary based on the goat's age, breed, and overall health. Ensure that the food is fresh and meets its nutritional requirements."
+  },
+  {
+    "prompt": "My chickens are losing feathers. What could cause it?",
+    "aris": "Feather loss can be caused by nutritional deficiencies, stress, disease, parasites, or pesticides. Isolate any sick birds and consult your vet or animal-health worker.",
+    "base": "A common issue among chickens is nutritional deficiencies. Ensure your chickens are getting enough protein, vitamins, and minerals through their diet. If you're using commercial feed, check if it's balanced properly. Sometimes, parasites can also lead to feather loss; consider treating them with a suitable anthelmintic. Make sure your chickens have clean water and space to move around. If the problem persists, consult a vet for further advice."
+  },
+  {
+    "prompt": "How do I spot Newcastle disease in poultry?",
+    "aris": "Look for sudden onset of depression, ruffled feathers, drooping wings, weakness, paralysis, and watery diarrhea. These symptoms can be mistaken for other diseases.",
+    "base": "Newcastle disease is a serious viral infection that can affect chickens, turkeys, guinea fowl, and other birds. Here’s how you can identify it:\n\n1. **Look for Sneezing**: The most common symptom of Newcastle disease is sneezing. Chickens will often sneeze frequently if infected.\n   \n2. **Observation of Discharge**: Affected birds might also produce nasal discharge, which can be clear or slightly yellowish.\n\n3. **Swelling of the Head**: In severe cases, the head of the bird may become swollen due to fluid accumulation around the brain caused by inflammation.\n\n4. **Lethargy and Loss of Appetite**: Birds affected by Newcastle disease tend to show signs of lethargy, loss of appetite, and difficulty in walking.\n\n5. **Abnormalities in the Crop and Throat**: You might notice swelling or enlargement of the crop (a sac-like structure where food is stored) and the throat area, especially when the bird opens its mouth wide.\n\n6. **Inflammation of the Lungs**: Affected birds may exhibit signs of respiratory distress, including coughing, wheezing, and breathing difficulties.\n\n7. **Death**: Unfortunately, Newcastle disease is"
+  },
+  {
+    "prompt": "What is the safest way to give a sick goat water?",
+    "aris": "Do not force-feed. Place clean water near the animal and let it drink when ready.",
+    "base": "To ensure the safety of your sick goat while giving it water, follow these steps:\n\n1. **Gather Supplies**: Collect all necessary supplies such as a clean bucket, a long stick, and some soft cloths.\n2. **Prepare the Environment**: Ensure that the area where you will be administering the water is free from any potential hazards like sharp objects or slippery surfaces.\n3. **Approach Carefully**: Approach the goat slowly and gently, ensuring you maintain a safe distance to avoid sudden movements.\n4. **Use the Long Stick**: Hold the long stick at a comfortable height above the goat’s head. This helps in reaching the mouth without straining.\n5. **Administer Water Gradually**: Slowly pour the water into the bucket using the long stick. Start with a small amount and gradually increase until the goat has had enough.\n6. **Monitor the Goat's Reaction**: After pouring the water, observe the goat closely. If the goat seems uncomfortable or if there are signs of distress, stop immediately and seek veterinary advice.\n7. **Provide Comforting Touches**: Offer gentle touches on the goat’s body to show comfort and reassurance.\n\nBy following these steps, you can safely provide water to your sick goat, helping it"
+  },
+  {
+    "prompt": "Wetin dey cause CMD?",
+    "aris": "CMD na virus wey begomoviruses dey cause. E no be soil disease — e dey spread through infected planting material and whitefly.",
+    "base": "CMD is caused by poor sanitation practices, lack of proper hygiene, and inadequate food storage. It's also influenced by overcrowding and poor nutrition. Make sure your farm has clean water sources, good waste management systems, and stores food properly to prevent CMD."
+  },
+  {
+    "prompt": "How I go stop rosette for groundnut?",
+    "aris": "No cure am completely. The best way na early planting, wide spacing, and resistant variety like SAMNUT series.",
+    "base": "To prevent rosette disease in groundnuts, it's important to maintain good cultural practices such as:\n\n1. **Soil Management**: Avoid planting on land that has been previously infected by rosette. Rotate your crops to different fields each year to break the cycle of infection.\n   \n2. **Crop Rotation**: Planting groundnuts in areas where other leguminous crops like beans or cowpeas were grown can help build up beneficial microorganisms in the soil that resist rosette.\n\n3. **Fertilization**: Use balanced fertilizers rich in nitrogen but avoid over-fertilizing, which can lead to nutrient imbalances that favor rosette development.\n\n4. **Water Management**: Ensure proper irrigation techniques to avoid waterlogging, which can create ideal conditions for rosette growth.\n\n5. **Weed Control**: Keep weeds under control because some weed species can act as vectors for spreading rosette.\n\n6. **Seed Treatment**: Consider using seed treatments that contain fungicides or insecticides to protect seeds against rosette.\n\n7. **Disease-Free Seed**: Always use certified, disease-free groundnut seeds.\n\nIf you suspect rosette is present, isolate affected plants early in the season to prevent its spread."
+  },
+  {
+    "prompt": "My cassava leaf dey mottled. Wetin fit cause am?",
+    "aris": "E fit be mosaic virus, Cassava Mosaic Disease. E no go be bacterial blight or fungal spot — those na different problems.",
+    "base": "A. Fertilizer."
+  },
+  {
+    "prompt": "Wetin be difference between REI and PHI?",
+    "aris": "REI na time when crop safe to harvest. PHI na number of day before you can spray again. Both na important, but different.",
+    "base": "REI stands for \"Residual Epidemic Interval,\" while PHI stands for \"Phytophthora Infestation Interval.\" These terms relate to different aspects of plant diseases. The REI is the time period during which a fungicide can be applied before another application will provide residual protection against the same disease. The PHI is the time interval after which a fungicide should not be used again on the same crop because it has lost its efficacy due to the development of resistance by the pathogen. Both are important considerations when managing fungal diseases in crops."
+  },
+  {
+    "prompt": "My chicken head dey twist. Wetin I do?",
+    "aris": "No use hot water. That fit make it worse. Dry dem well first — no wet am too much — then call vet wey dey your area.",
+    "base": "I do not know. Refer to your ADP extension officer for advice on how to treat this issue."
+  },
+  {
+    "prompt": "I planted cassava this season. What should I check next month?",
+    "aris": "Cassava suffers from Cassava Mosaic Disease (CMD) during rainy seasons. Next month is when CMD spreads fastest.",
+    "base": "Next month, it's important to monitor your cassava plants closely for signs of pests or diseases. Regularly inspecting the leaves and stems can help detect any early symptoms before they spread. Additionally, ensure that the soil moisture is adequate but not too wet, as excessive water can lead to root rot. Keep an eye on the growth rate; if there seems to be a significant difference between different parts of the plant, it might indicate nutrient deficiencies or other issues. If you notice anything unusual, consider consulting with a local farmer or visiting a nearby extension office for advice tailored to your specific area."
+  },
+  {
+    "prompt": "If my soil is sandy, should I adjust cassava spacing?",
+    "aris": "Yes. Sandy soils drain quickly, so closer spacing such as 75 cm x 25 cm is recommended over wider options like 100 cm x 100 cm.",
+    "base": "A. Yes"
+  },
+  {
+    "prompt": "You said 1 m x 1 m for cassava. What about a different variety?",
+    "aris": "That spacing is documented for sole-cropped ware cassava at 1 m x 1 m on flat land. For intercropping or high-density systems, consult your ADP extension agent.",
+    "base": "I apologize, but I don't have enough information to provide specific measurements for different varieties of cassava. Please consult your local agricultural extension officer or visit the National Cassava Project website for more accurate guidance."
+  },
+  {
+    "prompt": "Does the same spacing apply to both erect and branching cassava?",
+    "aris": "No. Spacing depends on whether it is erect or branching.",
+    "base": "Yes, the same spacing applies to both erect and branching cassava."
+  },
+  {
+    "prompt": "If I add fertilizer, do I need to change my yam spacing?",
+    "aris": "No. Spacing is determined by tuber size rather than nitrogen level.",
+    "base": "Aye, if you add fertilizer, it's best to check your local advice on how much to apply per square meter of land. But generally, adding more fertilizer can help increase crop yield, so you might want to consider increasing your planting density slightly to take advantage of this. Remember, always follow your local guidelines and consult with a farmer expert if needed."
+  },
+  {
+    "prompt": "Can you summarize CMD, CBSD, and YMV briefly?",
+    "aris": "CMD is systemic and causes yellowing, chlorosis, stunting, and rapid shoot death. CBSD is also systemic but affects leaves more than stems. YMV is viral and does not kill plants outright; it damages leaves and reduces vigor.",
+    "base": "Sure! CMD stands for Community Managed Drought Response System, which is a community-based approach to drought management. CBSD refers to Community-Based Social Development, focusing on social development projects within communities. YMV stands for Youth Mobilization Volunteers, who are trained to spread awareness about various issues like agriculture, health, and education among young people."
+  },
+  {
+    "prompt": "What are the top three cassava diseases in Nigeria?",
+    "aris": "The top three are Cassava Mosaic Disease (CMD), Cassava Brown Streak Disease (CBSD), and Cassava Yellow Leaf Curl Virus (AYLCV). CMD is the most widespread and causes yellow-green mosaic patterns on leaves and severe stunting. CBSD causes dry brown rot inside stems. AYLCV infects plants via whitefly and causes yellowing, chlorosis, and leaf curling.",
+    "base": "The top three cassava diseases in Nigeria are:\n\n1. **Cassava Mosaic Disease** - This is one of the most significant diseases affecting cassava crops in Nigeria. It causes severe leaf distortion, chlorosis, and can lead to yield losses up to 95%.\n\n2. **Cassava Brown Streak Virus (CBSV)** - CBSV is another major disease that affects cassava plants, causing yellowing leaves, stunted growth, and eventually leading to plant death if left untreated.\n\n3. **Cassava Black Rot** - Cassava black rot is caused by the bacterium *Erwinia tracheiphila* and leads to wilting of the leaves, followed by the entire plant turning brown and dying. This disease can be particularly devastating during periods of high humidity and rainfall.\n\nThese diseases significantly impact cassava production in Nigeria, necessitating regular monitoring and management practices such as crop rotation, proper sanitation, and timely application of resistant varieties."
+  },
+  {
+    "prompt": "What is the difference between fertilizer and manure?",
+    "aris": "Fertilizer supplies nutrients such as nitrogen, phosphorus, and potassium at prescribed rates. Manure provides organic matter and some nutrients but does not supply the three major nutrients at the correct ratio.",
+    "base": "Fertilizer and manure both help plants grow, but they work differently. Fertilizers contain nutrients like nitrogen, phosphorus, and potassium that plants need to thrive. Manure, on the other hand, is animal waste that contains organic matter and can also provide some of these nutrients. While fertilizers are usually applied directly to the soil, manure is often spread on fields before planting. Both are important for agriculture, but they serve different purposes."
+  },
+  {
+    "prompt": "If I have 2 hectares, how many cassava cuttings should I prepare?",
+    "aris": "Prepare about 46,667 planting positions at 1 m by 1 m spacing.",
+    "base": "A. 400000"
+  },
+  {
+    "prompt": "What government agency handles agricultural extension in Nigeria?",
+    "aris": "Nigerian Federal Ministry of Agriculture and Rural Development (FMArD), through its National Institute for Agricultural Research and Development (NIHORT).",
+    "base": "The government agency that handles agricultural extension in Nigeria is the National Agricultural Research Center (NARC)."
+  }
+]

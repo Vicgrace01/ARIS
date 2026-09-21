@@ -1,0 +1,261 @@
+{
+  "passed": 51,
+  "total": 51,
+  "checks": [
+    {
+      "status": "[PASS]",
+      "label": "metadata.json exists",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "label": "metadata.json parses as JSON",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "label": "metadata.json has all template top-level keys",
+      "detail": "missing: []"
+    },
+    {
+      "status": "[PASS]",
+      "label": "metadata.json has exactly 2 well-formed test_prompts",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "label": "metadata.json provenance has all 4 required fields",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "label": "provenance.fine_tuning_method is valid",
+      "detail": "got: 'qlora'"
+    },
+    {
+      "status": "[PASS]",
+      "label": "metadata.json has NO git_commit_sha key",
+      "detail": "if present, remove \u2014 profiler schema rejects it"
+    },
+    {
+      "status": "[PASS]",
+      "label": "metadata.json _runtime.model_path is set",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "label": "metadata.json model.runtime = llama.cpp",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "label": "download_model.sh has literal MODEL_FILE + MODEL_URL",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "label": "download_model.sh URL is pinned (not 'main')",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "label": "download_model.sh exists",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "label": "REPORT.md exists",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "label": "REPORT.md contains all required sections and claims",
+      "detail": "missing: []"
+    },
+    {
+      "status": "[PASS]",
+      "label": "model/ exists and contains no GGUF",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "label": ".gitignore excludes *.gguf",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "label": "adapter_config.json exists",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "label": "adapter_manifest.json exists",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "label": "adapter README.md exists",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "label": "adapter manifest has SHA-256",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "label": "adapter manifest has HF revision",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "label": "adapter manifest has direct URL",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "label": "checksums.txt has revision + adapter + GGUF hashes",
+      "detail": "rev=True adapter=True gguf=True"
+    },
+    {
+      "status": "[PASS]",
+      "label": "provenance_manifest.json valid and complete",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "label": "provenance/adapter/adapter_config.json",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "label": "provenance/adapter/adapter_manifest.json",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "label": "provenance/adapter/README.md",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "label": "provenance/system_prompt.txt",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "label": "provenance/training_loss_log.csv",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "label": "provenance/val_loss_log.csv",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "label": "provenance/training_args.json",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "label": "provenance/training_summary.json",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "label": "provenance/merge_and_quantize.py",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "label": "provenance/dataset_card.md",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "label": "provenance/checksums.txt",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "label": "provenance/before_after.json",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "label": "provenance/zero_leakage_audit.md",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "label": "provenance/loss_curves.png",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "label": "provenance/unseen_battery.json",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "label": "provenance/unseen_contamination_audit.md",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "label": "provenance/provenance_manifest.json",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "label": "provenance/base_model_revision.txt",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "label": "provenance/dataset/ exists",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "label": "provenance/dataset/README.md",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "label": "provenance/dataset/canonical_claims.json",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "label": "provenance/dataset/blacklist.json",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "label": "provenance/dataset/conditional_register.json",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "label": "provenance/dataset/pre_verified_subset.jsonl",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "label": "provenance/dataset/canonical_claims.json parses as JSON",
+      "detail": "type=list"
+    },
+    {
+      "status": "[PASS]",
+      "label": "provenance/dataset/blacklist.json parses as JSON",
+      "detail": "type=list"
+    },
+    {
+      "status": "[PASS]",
+      "label": "provenance/dataset/conditional_register.json parses as JSON",
+      "detail": "type=list"
+    }
+  ]
+}

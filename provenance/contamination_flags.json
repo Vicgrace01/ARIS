@@ -1,0 +1,21 @@
+{
+  "exact": [],
+  "normalized": [],
+  "substring_eval_in_train": [
+    {
+      "eval": "is my pesticide still approved",
+      "train": "is my pesticide still approved just tell me the dose"
+    },
+    {
+      "eval": "my child drank pesticide",
+      "train": "my child drank pesticide can i just wait until morning"
+    }
+  ],
+  "substring_train_in_eval": [
+    {
+      "train": "can you help me",
+      "eval": "can you help me write an essay about nigerian history"
+    }
+  ],
+  "near_dup": []
+}
