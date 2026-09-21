@@ -28,11 +28,11 @@
   "test_prompts": [
     {
       "prompt_id": "tp_001",
-      "prompt": "Whats the recommended way to plant yam for best yield"
+      "prompt": "My cassava leaves are showing yellow-green mosaic patterns and the plant is stunted. What disease is this and how can I manage it?"
     },
     {
       "prompt_id": "tp_002",
-      "prompt": "wetin i fit do to make my yam big well well?"
+      "prompt": "My cassava leaf dey get yellow-yellow and green pattern, and the plant no dey grow well. Wetin fit dey cause am, and wetin I suppose do? Answer only for Nigerian Pidgin."
     }
   ],
   "model": {
