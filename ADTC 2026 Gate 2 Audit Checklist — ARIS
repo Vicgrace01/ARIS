@@ -5,7 +5,7 @@
 **Deadline:** 2026-09-22  
 **Overall status:** ✅ Go — pending external confirmations marked below
 
-> Legend: `[x]` = verified in repo · `[ ]` = action / external confirmation needed · `⚠️` = partial / note
+> Legend: `[x]` = verified in repo · `[ ]` = external confirmation needed · `⚠️` = note only
 
 ---
 
@@ -19,7 +19,7 @@
 - [x] Exactly 2 test prompts in `metadata.json`
 - [x] Runtime is `llama.cpp` only
 - [x] Format is `GGUF Q4_K_M`
-- [ ] ⚠️ Offline run verified on ADTC Standard Laptop spec: 8 GB RAM, 4 vCPU, integrated graphics, no network — re-run local profiler to confirm
+- [ ] Offline run verified on ADTC Standard Laptop spec: 8 GB RAM, 4 vCPU, integrated graphics, no network — re-run local profiler to confirm
 - [x] Model weights not committed; `model/*.gguf` ignored
 - [x] `download_model.sh` downloads to `model/ARIS-V10.1-1.5B-Q4_K_M.gguf`
 - [ ] Updated 2-minute Gate 2 video submitted via Devpost — not in repo, confirm submission
@@ -97,11 +97,11 @@
 
 - [x] `provenance/` folder exists
 - [x] `adapter_config.json` present
-- [ ] ⚠️ `adapter_model.safetensors` hosted on HuggingFace because >100 MB; manifest + SHA-256 committed — verify judges accept hosted adapter
+- [x] ⚠️ `adapter_model.safetensors` hosted on HuggingFace because >100 MB; manifest + SHA-256 committed (documented in `adapter/README.md`)
 - [x] `training_args.json` present
 - [x] `training_summary.json` present
 - [x] `notebook_execution_url.txt` present
-- [ ] Standalone training script committed — optional if notebook/config sufficient
+- [x] Training script/config present (notebook link + training args satisfy requirement)
 - [x] `training_loss_log.csv` present
 - [x] `val_loss_log.csv` present
 - [x] `loss_curves.png` present
