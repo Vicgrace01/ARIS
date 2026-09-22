@@ -390,9 +390,10 @@ adtc-profiler run --submission . --mode participant --output submission.json
 ├── README.md                      This file
 ├── LICENSE                        GPL-3.0
 ├── .gitignore                     Excludes model weights
+├── .gitattributes                 Routes adapter_model.safetensors through Git LFS
 ├── model/                         Empty; GGUF downloaded at eval time
 ├── provenance/                    Proof-of-training artifacts
-│   ├── adapter/                   LoRA manifest, config, verification README
+│   ├── adapter/                   LoRA weights (Git LFS), manifest, config, README
 │   ├── dataset/                   Verification artifacts
 │   │   ├── canonical_claims.jsonl   Verified fact register
 │   │   ├── blacklist.json           Fabrications and unsafe dosages
@@ -424,7 +425,8 @@ adtc-profiler run --submission . --mode participant --output submission.json
 All artifacts a reviewer would need to verify the training run are
 committed:
 
-- LoRA adapter metadata (SHA-256, HF revision) in `provenance/adapter/`
+- LoRA adapter weights (`adapter_model.safetensors`, 295 MB, Git LFS-tracked)
+  and metadata (SHA-256, storage path) in `provenance/adapter/`
 - Per-step loss logs in `provenance/training_loss_log.csv`
 - Training hyperparameters in `provenance/training_args.json`
 - Dataset sample in `provenance/dataset_sample.jsonl`
