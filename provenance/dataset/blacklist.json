@@ -53,9 +53,7 @@
     "forbidden_claim": "ARIS can check live weather, access live market prices, or analyze uploaded photographs.",
     "reason": "Hardware/deployment constraints. The offline model has no internet access or computer vision capabilities.",
     "severity": "critical"
-  }
-]
-[
+  },
   {
     "forbidden_claim": "Fertilizer cures or controls Fall Armyworm (FAW).",
     "reason": "False. Fertilizer improves plant vigor and resilience, but it has no insecticidal properties and cannot kill FAW.",
@@ -85,9 +83,7 @@
     "forbidden_claim": "Visible mould is required for maize to be contaminated with aflatoxins.",
     "reason": "False. Aflatoxins are invisible chemical toxins produced by fungi; highly contaminated grain can appear visually clean.",
     "severity": "critical"
-  }
-]
-[
+  },
   {
     "forbidden_claim": "Fertilizer cures Rice Yellow Mottle Virus (RYMV) or Rice Blast.",
     "reason": "False. Fertilizers provide soil nutrition and cannot cure viral infections or fungal diseases.",
@@ -112,9 +108,7 @@
     "forbidden_claim": "The sawah system completely prevents rice blast infection.",
     "reason": "False. Sawah cultivation does not preclude rice blast infection if weather and pathogen pressure are favorable.",
     "severity": "high"
-  }
-]
-[
+  },
   {
     "forbidden_claim": "Fertilizer cures or eliminates Striga hermonthica parasitism.",
     "reason": "False. Nitrogen application suppresses Striga and improves host vigor, but it does not cure the parasitic infection or destroy the soil seed bank.",
@@ -134,9 +128,7 @@
     "forbidden_claim": "One season of crop rotation or hand-pulling completely eradicates Striga from an infested field.",
     "reason": "False. Striga seeds remain viable in soil for 15–20 years; eradication requires multi-year integrated management.",
     "severity": "high"
-  }
-]
-[
+  },
   {
     "forbidden_claim": "Cowpea requires heavy nitrogen fertilization for optimal growth and yield.",
     "reason": "False. Cowpea is a legume that fixes atmospheric nitrogen through root nodules; excessive N causes lush vegetative growth with poor grain yield. Phosphorus is the primary nutrient focus.",
@@ -156,9 +148,7 @@
     "forbidden_claim": "Chemical fertilizers cure insect pest attacks or internal bruchid infestations in cowpea grain.",
     "reason": "False. Fertilizers provide plant nutrition and have no pesticidal or curative properties against insects.",
     "severity": "critical"
-  }
-]
-[
+  },
   {
     "forbidden_claim": "Bacterial wilt of tomato can be cured or treated with conventional agricultural fungicides.",
     "reason": "False. Bacterial wilt is caused by the bacterium Ralstonia solanacearum. Fungicides only target fungi and have no effect on bacteria.",
@@ -178,9 +168,7 @@
     "forbidden_claim": "Chemical fertilizers or household home remedies cure bacterial wilt or viral leaf curl infections in tomatoes.",
     "reason": "False. Pathogens are systemic bacteria and viruses; fertilizers and home mixtures possess no curative or therapeutic properties against them.",
     "severity": "critical"
-  }
-]
-[
+  },
   {
     "forbidden_claim": "Soybean requires heavy applications of chemical nitrogen fertilizer for high grain yields.",
     "reason": "False. Soybean is a legume that fixes its own nitrogen through symbiotic root nodulation with rhizobia; excessive nitrogen suppresses nodulation and wastes resources.",
@@ -200,9 +188,7 @@
     "forbidden_claim": "Chemical fertilizers cure viral infections or insect pest infestations in soybean crops.",
     "reason": "False. Fertilizers provide essential soil nutrients and possess no antiviral or pesticidal properties.",
     "severity": "critical"
-  }
-]
-[
+  },
   {
     "forbidden_claim": "Groundnut does not require calcium for pod filling and seed development.",
     "reason": "False. Calcium is vital for proper pod and seed formation in the podding zone; gypsum (calcium sulfate) application at pegging is a standard agronomic requirement to prevent empty pods ('pops').",
@@ -222,9 +208,7 @@
     "forbidden_claim": "Groundnut seeds should be planted deeply (e.g., 7 cm or more) to ensure moisture access.",
     "reason": "False. Deep planting impairs seedling emergence, reduces vigor, and causes uneven stands; recommended depth is strictly 3 to 5 cm.",
     "severity": "high"
-  }
-]
-[
+  },
   {
     "forbidden_claim": "Pearl millet requires permanent irrigation or high-water flooding conditions similar to lowland rice production.",
     "reason": "False. Pearl millet is a drought-tolerant dryland crop adapted to semi-arid savanna zones and cannot tolerate waterlogging or permanent flooding.",
@@ -244,9 +228,7 @@
     "forbidden_claim": "Dry planting is generally recommended as a primary agronomic rule for pearl millet in rainfed environments.",
     "reason": "False. Dry planting is discouraged because unpredictable early rains can cause seed germination failure and death in the soil before crop establishment.",
     "severity": "medium"
-  }
-]
-[
+  },
   {
     "forbidden_claim": "Sweet potato can be routinely propagated for commercial root production using whole or cut storage roots as the primary planting material.",
     "reason": "False. Standard sweet potato agronomy relies strictly on apical and middle vine cuttings, not storage roots.",
@@ -266,9 +248,7 @@
     "forbidden_claim": "Conventional agricultural fungicides cure bacterial soft rot or bacterial wilt in stored potato tubers.",
     "reason": "False. Soft rot and bacterial wilt are caused by bacteria (e.g., Pectobacterium, Ralstonia). Fungicides target fungi and oomycetes and have zero antibacterial efficacy.",
     "severity": "critical"
-  }
-]
-[
+  },
   {
     "forbidden_claim": "Onion bulbs size up entirely from heavy applications of chemical nitrogen fertilizer.",
     "reason": "False. Potassium (K) and sulfur (S) are critical for proper bulb formation and scaling; excess nitrogen promotes unwanted vegetative leaf growth at the expense of bulb sizing.",
@@ -288,9 +268,7 @@
     "forbidden_claim": "Chemical fertilizers or fungicides cure systemic viral mosaic/mottle infections in pepper plants.",
     "reason": "False. Plant viruses are systemic pathogens; neither soil fertilizers nor foliar fungicides possess antiviral curative properties.",
     "severity": "critical"
-  }
-]
-[
+  },
   {
     "forbidden_claim": "Farmers can safely wash and reuse empty pesticide containers for storing household drinking water or food.",
     "reason": "False. Residues remain trapped in plastic materials despite washing, posing extreme public health and poisoning risks.",
@@ -310,9 +288,7 @@
     "forbidden_claim": "Foliar fungicides or soil fertilizers can cure systemic plant viral infections or bacterial soft rots.",
     "reason": "False. Fertilizers provide plant nutrition and fungicides target fungi/oomycetes; neither possesses antiviral or antibacterial properties.",
     "severity": "critical"
-  }
-]
-[
+  },
   {
     "forbidden_claim": "Any single chemical pesticide, fertilizer, or home remedy can serve as a universal cure for all plant diseases regardless of pathogen classification.",
     "reason": "False. Plant pathogens are biologically distinct (fungi, bacteria, viruses, oomycetes, nematodes); treatments must match the precise biological target.",
@@ -322,9 +298,7 @@
     "forbidden_claim": "When an agricultural query involves an unlisted minor crop or unknown symptom, an offline AI should invent specific treatment dosages and spray schedules from general assumptions.",
     "reason": "False. Inventing unverified prescriptions for unlisted crops violates zero-hallucination constraints and risks severe agricultural damage; unlisted domains must trigger general agronomic fallback or ADP extension referral.",
     "severity": "critical"
-  }
-]
-[
+  },
   {
     "forbidden_claim": "I was created by OpenAI, Google, Meta, Anthropic, Alibaba, or Qwen.",
     "reason": "Base model identity bleed. ARIS must explicitly attribute its creation to Victor Chukwuebuka Nwaruwe (Vicgrace) and Vicgrace Labs.",
