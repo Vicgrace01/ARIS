@@ -49,6 +49,13 @@ model-index:
 
 **Africa Deep Tech Challenge 2026 — Laptop LLM track**
 
+**Repository:** https://github.com/Vicgrace01/ARIS  
+**Model:** `ARIS-V10.1-1.5B-Q4_K_M`  
+**Base model:** [`unsloth/Qwen2.5-1.5B-Instruct`](https://huggingface.co/unsloth/Qwen2.5-1.5B-Instruct) @ `3d254dbee5e3beae81bb8a717ad3a03427a09d26`  
+**License:** GPL-3.0 (code) · CC BY 4.0 (training corpus)
+
+---
+
 ARIS is an offline, bilingual (English and Nigerian Pidgin) AI agricultural
 advisor designed to run entirely on an 8 GB laptop with no internet
 connection. It answers crop, pest, and livestock questions grounded in
@@ -59,6 +66,40 @@ context.
 The model is a fine-tuned Qwen2.5-1.5B, quantized to GGUF Q4_K_M and
 deployed via `llama.cpp`. It is designed for the hardware that actually
 exists in Nigerian farming communities — not for a data centre.
+
+---
+
+## Gate 2 Update Summary
+
+This README reflects the **Gate 2 (semifinalist round)** submission. Key
+changes since the Gate 1 submission:
+
+- **Model Provenance section added** — base model source, exact revision,
+  fine-tuning method, and training datasets are now disclosed in
+  `metadata.json` and this document.
+- **`provenance/` folder added** with adapter manifest, training logs,
+  dataset verification artifacts, SHA-256 checksums, merge/quantization
+  script, system prompt, and contamination audit.
+- **`download_model.sh` URL pinned** to HuggingFace commit
+  `39e09e4d7303af31c6fa5199c2a09f3fad0d746e` (immutable, statically readable).
+- **Gate 1 accuracy feedback addressed** — frozen evaluation matrix
+  (131 records, 8 categories) finalized before training, plus an unseen
+  adversarial battery (53 probes, 0 failures).
+- **Evaluation artifacts committed** — `frozen_eval_strict.json`,
+  `frozen_eval_tolerant.json`, `redteam_scored.json`,
+  `redteam_unseen_scored.json`, and `submission.json`.
+
+### Compliance Status
+
+- [x] Metadata provenance object filled
+- [x] `REPORT.md` Model Provenance section
+- [x] `provenance/` folder complete
+- [x] `download_model.sh` pinned to exact commit SHA
+- [x] Evaluation artifacts committed
+- [x] Before/after base-vs-fine-tuned comparison
+- [ ] Updated 2-minute video — submitted via Devpost
+- [ ] Eligibility documents ready
+- [ ] Benchmark profiler re-run on ADTC Standard Laptop spec
 
 ---
 
@@ -250,9 +291,7 @@ Four seen failures are documented with specific failure signatures in
 
 ### Download the model
 
-```bash
-bash download_model.sh
-```
+    bash download_model.sh
 
 The script fetches the GGUF from a pinned HuggingFace commit
 (`39e09e4d7303af31c6fa5199c2a09f3fad0d746e`) so the file cannot silently
@@ -263,57 +302,50 @@ change after evaluation begins. SHA-256 verification is documented in
 
 **Strict evaluation mode** (deterministic, `temperature = 0.0`):
 
-```bash
-llama-cli -m model/ARIS-V10.1-1.5B-Q4_K_M.gguf \
-  -p "User: My cassava leaves are showing yellow-green mosaic patterns and the plant is stunted. What disease is this and how can I manage it?
-Assistant:" \
-  -n 256 --temp 0.0 --threads 4
-```
+    llama-cli -m model/ARIS-V10.1-1.5B-Q4_K_M.gguf \
+      -p "User: My cassava leaves are showing yellow-green mosaic patterns and the plant is stunted. What disease is this and how can I manage it?
+    Assistant:" \
+      -n 256 --temp 0.0 --threads 4
 
 **Conversational field mode** (`temperature = 0.7`):
 
-```bash
-llama-cli -m model/ARIS-V10.1-1.5B-Q4_K_M.gguf \
-  -p "User: Wetin be the correct way to plant yam for rainy season?
-Assistant:" \
-  -n 256 --temp 0.7 --top-p 0.9 --threads 4
-```
+    llama-cli -m model/ARIS-V10.1-1.5B-Q4_K_M.gguf \
+      -p "User: Wetin be the correct way to plant yam for rainy season?
+    Assistant:" \
+      -n 256 --temp 0.7 --top-p 0.9 --threads 4
 
 ### Run the ADTC profiler
 
-```bash
-adtc-profiler run --submission . --mode participant --output submission.json
-```
+    adtc-profiler run --submission . --mode participant --output submission.json
 
 ---
 
 ## Repository Layout
 
-```
-.
-├── metadata.json                  ADTC submission metadata
-├── download_model.sh              Fetches the GGUF from the pinned HF commit
-├── REPORT.md                      Technical writeup
-├── LICENSE                        GPL-3.0
-├── .gitignore                     Excludes model weights
-├── model/                         Empty; GGUF downloaded at eval time
-├── provenance/                    Proof-of-training artifacts
-│   ├── adapter/                   LoRA manifest, config, verification README
-│   ├── dataset/                   Verification artifacts (claims, blacklist)
-│   ├── checksums.txt              SHA-256 of base model, adapter, GGUF
-│   ├── training_summary.json      Hyperparameters and best-checkpoint info
-│   ├── training_loss_log.csv      Per-step loss values
-│   ├── loss_curves.png            Visualisation
-│   ├── merge_and_quantize.py      Adapter → GGUF script
-│   ├── system_prompt.txt          The canonical system prompt
-│   ├── zero_leakage_audit.md      Contamination audit
-│   └── ...
-├── frozen_eval_strict.json        Frozen eval results (strict rubric)
-├── frozen_eval_tolerant.json      Frozen eval results (tolerant rubric)
-├── redteam_scored.json            Seen adversarial battery results
-├── redteam_unseen_scored.json     Unseen adversarial battery results
-└── submission.json                ADTC profiler participant-mode output
-```
+    .
+    ├── metadata.json                  ADTC submission metadata
+    ├── download_model.sh              Fetches the GGUF from the pinned HF commit
+    ├── REPORT.md                      Technical writeup
+    ├── README.md                      This file (model card)
+    ├── LICENSE                        GPL-3.0
+    ├── .gitignore                     Excludes model weights
+    ├── model/                         Empty; GGUF downloaded at eval time
+    ├── provenance/                    Proof-of-training artifacts
+    │   ├── adapter/                   LoRA manifest, config, verification README
+    │   ├── dataset/                   Verification artifacts (claims, blacklist)
+    │   ├── checksums.txt              SHA-256 of base model, adapter, GGUF
+    │   ├── training_summary.json      Hyperparameters and best-checkpoint info
+    │   ├── training_loss_log.csv      Per-step loss values
+    │   ├── loss_curves.png            Visualisation
+    │   ├── merge_and_quantize.py      Adapter → GGUF script
+    │   ├── system_prompt.txt          The canonical system prompt
+    │   ├── zero_leakage_audit.md      Contamination audit
+    │   └── ...
+    ├── frozen_eval_strict.json        Frozen eval results (strict rubric)
+    ├── frozen_eval_tolerant.json      Frozen eval results (tolerant rubric)
+    ├── redteam_scored.json            Seen adversarial battery results
+    ├── redteam_unseen_scored.json     Unseen adversarial battery results
+    └── submission.json                ADTC profiler participant-mode output
 
 ---
 
@@ -359,15 +391,13 @@ or their family. ARIS was designed with this in mind:
 
 ## Citation
 
-```bibtex
-@misc{aris_v10_1_2026,
-  title   = {ARIS V10.1: An Offline Agronomic Advisor for Nigerian Smallholder Farmers},
-  author  = {Nwaruwe, Victor Chukwuebuka},
-  year    = {2026},
-  note    = {Africa Deep Tech Challenge 2026, Laptop LLM track},
-  url     = {https://github.com/Vicgrace01/ARIS}
-}
-```
+    @misc{aris_v10_1_2026,
+      title   = {ARIS V10.1: An Offline Agronomic Advisor for Nigerian Smallholder Farmers},
+      author  = {Nwaruwe, Victor Chukwuebuka},
+      year    = {2026},
+      note    = {Africa Deep Tech Challenge 2026, Laptop LLM track},
+      url     = {https://github.com/Vicgrace01/ARIS}
+    }
 
 ---
 
