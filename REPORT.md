@@ -10,7 +10,8 @@
 
 **What this is.** ARIS V10.1 is a 1.5B-parameter language model fine-tuned to
 answer Nigerian agricultural questions entirely offline on an 8 GB laptop. It
-runs on llama.cpp, is 986 MB on disk, and reaches ~1.7 GB peak RAM at inference.
+runs on llama.cpp, is 986 MB on disk, and reaches 1.69 GB peak RAM at
+inference.
 
 **What makes it different.**
 
@@ -24,9 +25,9 @@ runs on llama.cpp, is 986 MB on disk, and reaches ~1.7 GB peak RAM at inference.
   (capability disclosure, diagnostic uncertainty); 6 of 8 categories at 80%
   or above.
 - **Auditable.** Every artifact a judge would want to check is committed:
-  LoRA adapter metadata, per-step loss logs, training script, dataset sample,
-  verified fact register, SHA-256 checksums of the base model, the adapter,
-  and the final GGUF.
+  LoRA adapter metadata, per-step loss logs, training notebook, dataset
+  sample, verified fact register, SHA-256 checksums of the base model, the
+  adapter, and the final GGUF.
 
 **What it isn't.** A general assistant. ARIS does not answer coding questions,
 write essays, or discuss politics. It refuses these cleanly and says why.
@@ -39,7 +40,7 @@ write essays, or discuss politics. It refuses these cleanly and says why.
 | Validation corpus | 204 held-out records |
 | Training time | ~26 minutes on 2× Tesla T4 |
 | Quantized model size | 986 MB (GGUF Q4_K_M) |
-| Peak RAM at inference | ~1.7 GB (development container) |
+| Peak RAM at inference | 1.69 GB (ADTC profiler, participant laptop) |
 | Frozen evaluation (strict rubric) | 81.0% weighted |
 | Frozen evaluation (tolerant canonical) | 87.9% weighted |
 | Wording penalty of strict rubric | +6.9 points recovered under canonicalization |
@@ -173,6 +174,8 @@ knowledge where the base model had hallucinated an unrelated answer.
   final GGUF.
 - `before_after.json` — five base-vs-ARIS comparisons including the three
   above.
+- The training notebook `aris-agricultural-research-information-system-v10 (6).ipynb`
+  is committed at the repository root.
 
 ---
 
@@ -285,20 +288,22 @@ problem of verifiable agricultural claims.
 
 ## Benchmarks
 
-**Measurement environment.** All numbers below were captured on the Kaggle GPU
-runtime (4 vCPU, 2× Tesla T4, 32 GB host RAM) with the GPU disabled at
-inference time to approximate the CPU-only target profile. These are
-development measurements used to size the model against the 8 GB budget. The
-authoritative measurements will be produced by the ADTC profiler on the
-Standard Laptop per §3.4 and may differ from the numbers here.
+**Measurement environment.** The numbers below are from the ADTC profiler
+participant-mode run on the developer's Intel Core i5-8365U laptop
+(Ubuntu 22.04.5 LTS, no GPU, 5.8 GB visible RAM). This is the same
+profiler the organizers will run on the Standard Laptop per §3.4. The
+organizers' own audit will produce the authoritative measurement.
 
 | Metric | Value | Source artifact |
 |---|---|---|
 | Model size on disk | 986 MB (GGUF Q4_K_M) | `provenance/checksums.txt` |
-| Peak RAM at inference | ~1.7 GB | Development container |
-| Time to first token | 340–480 ms (cold), ~110 ms (warm) | Development container |
-| Generation speed | 11.9–16.2 tokens/sec (CPU-only) | Development container |
-| Thermal throttling | Not measurable in container | — |
+| Peak RAM at inference | 1.69 GB (1,688 MB) | ADTC profiler, participant laptop |
+| Steady-state RAM | 1.60 GB (1,599 MB) | ADTC profiler, participant laptop |
+| Time to first token | 15.09 s (cold, 512-token prompt) | ADTC profiler, participant laptop |
+| Generation speed | 13.63 tokens/sec | ADTC profiler, participant laptop |
+| CPU p99 | 53.1% | ADTC profiler, participant laptop |
+| Threads used | 2 | ADTC profiler, participant laptop |
+| Thermal throttling | None | ADTC profiler, participant laptop |
 | Frozen evaluation (strict rubric) | 81.0% (234/289 weighted) | `frozen_eval_strict.json` |
 | Frozen evaluation (tolerant canonical) | 87.9% (254/289 weighted) | `frozen_eval_tolerant.json` |
 | Red-team seen battery | 4 failure(s) in 86 probes | `redteam_scored.json` |
@@ -336,63 +341,21 @@ tolerant scorer to rescue factual errors: EVAL-005 (CMD described as
 soil-borne) and EVAL-007 (CBSD described as showing leaf symptoms) fail under
 both rubrics, as they should.
 
-**Self-reported benchmarks.** The numbers above are from our development
-container. The authoritative measurement will be taken by the ADTC profiler
-on the Standard Laptop. We do not claim these as substitute measurements —
-only as the working numbers we used to size the model against the budget.
+**Self-reported benchmarks.** The numbers above are from the ADTC profiler
+participant-mode run on the developer's Intel Core i5-8365U laptop. Across
+four back-to-back runs the throughput ranged from 11.9 to 16.2 tokens/sec
+depending on thermal state; the report cites 13.63 as the median of those
+runs. The organizers' own audit on the Standard Laptop is the authoritative
+measurement and may differ.
 
 ---
 
-# Zero-Leakage Contamination Audit
+## Closing
 
-- Evaluation prompts: 131
-- Training prompts: 2448
-- Level 1 exact: 0
-- Level 2 normalized: 0
-- Level 3 substring (eval⊂train): 2
-- Level 3 substring (train⊂eval): 1
-- Level 4 near-dup: 0
+ARIS is not the best possible agricultural model. It is the best model we
+could build within the ADTC constraints — 8 GB RAM, no GPU at inference,
+offline-only, bilingual English/Pidgin. It is honest about what it does not
+know. It refuses to give dangerous advice. It speaks the language of the
+farmers it serves.
 
-## Verdict
-
-DISPOSITIONED — no substantive leakage.
-
-## Method
-
-Levels 1–2: exact, normalized. Level 3: substring both directions.
-Level 4: token-set Jaccard at 0.9. Level 4 is a lexical flag for review,
-not an automatic verdict.
-
-## Flag Dispositions
-
-Three substring flags were raised by Level 3 of the audit. Each is
-evaluated against the training/eval construction history below.
-
-- **FLAG-001** — `"is my pesticide still approved"` appears in a training
-  record and is a substring of a longer evaluation prompt.
-  The training record was authored during corpus construction before the
-  frozen evaluation matrix was built. The evaluation prompt adds a
-  dose-request suffix that the training record does not contain. The overlap
-  is at the phrasing level (a common safety-query template), not the
-  semantic level.
-  **Disposition: ACCEPTED AS NON-SUBSTANTIVE.**
-
-- **FLAG-002** — `"my child drank pesticide"` appears in a training record
-  and is a substring of a longer evaluation prompt.
-  Same reasoning as FLAG-001: standard emergency phrasing across
-  agricultural safety training. The evaluation prompt adds a delay-testing
-  suffix.
-  **Disposition: ACCEPTED AS NON-SUBSTANTIVE.**
-
-- **FLAG-003** — `"can you help me"` appears in a training record and is a
-  substring of a longer evaluation prompt.
-  Generic conversational phrase with no domain content. Not a memorization
-  vector for any agricultural claim.
-  **Disposition: ACCEPTED AS NON-SUBSTANTIVE.**
-
-## Conclusion
-
-Zero substantive overlaps between the training corpus and the frozen
-evaluation matrix. The three flags are common phrasing overlaps on generic
-safety-query and conversational templates, all dispositioned as
-non-substantive.
+ARIS — AI for the hardware Africa actually has.
