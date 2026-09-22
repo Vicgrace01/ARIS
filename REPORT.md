@@ -149,15 +149,19 @@ knowledge where the base model had hallucinated an unrelated answer.
 - `adapter/adapter_config.json` — the LoRA structure from the run
   (r=64, alpha=128, 7 target modules: q_proj, k_proj, v_proj, o_proj,
   gate_proj, up_proj, down_proj).
-- `adapter/adapter_manifest.json` — SHA-256, size, and HuggingFace URL for
-  the adapter weights. The weights themselves (`adapter_model.safetensors`,
-  295 MB) are hosted at `https://huggingface.co/Vicgrace/ARIS-V10.1` because
-  the file exceeds GitHub's 100 MB per-file limit. The manifest records the
-  exact revision (`894c24fb6c4143acda0b3e54e26ef44b962e67a5`) and the SHA-256
-  (`b5500b5603e79d055eb1baafc9d1cf4c234c2378cba9d8478ea4de974a677832`).
-  Verification is a two-command operation documented inside
-  `provenance/adapter/README.md`. The output must match the SHA-256 recorded
-  in the manifest.
+- `adapter/adapter_model.safetensors` — the LoRA weights themselves
+  (295,488,936 bytes / ~295 MB), committed to this repository using **Git LFS**
+  and tracked via the repo-root `.gitattributes` rule:
+  `provenance/adapter/adapter_model.safetensors filter=lfs diff=lfs merge=lfs -text`.
+  SHA-256 `b5500b5603e79d055eb1baafc9d1cf4c234c2378cba9d8478ea4de974a677832`.
+  A pinned Hugging Face mirror is also published for convenience at
+  `https://huggingface.co/Vicgrace/ARIS-V10.1` (revision
+  `894c24fb6c4143acda0b3e54e26ef44b962e67a5`) but is not the authoritative
+  artifact.
+- `adapter/adapter_manifest.json` — SHA-256, size, storage path, and
+  verification command for the adapter weights. Verification is a single
+  command documented inside `provenance/adapter/README.md`; the output must
+  match the SHA-256 recorded in the manifest.
 - `training_loss_log.csv` and `val_loss_log.csv` — per-step loss values for
   the training run.
 - `loss_curves.png` — visualisation of the two loss curves.
