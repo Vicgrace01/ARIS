@@ -1,13 +1,20 @@
 {
   "artifact": "adapter_model.safetensors",
-  "hosted_at": "https://huggingface.co/Vicgrace/ARIS-V10.1",
-  "revision": "894c24fb6c4143acda0b3e54e26ef44b962e67a5",
-  "direct_url": "https://huggingface.co/Vicgrace/ARIS-V10.1/resolve/894c24fb6c4143acda0b3e54e26ef44b962e67a5/adapter_model.safetensors",
+  "storage": "git-lfs",
+  "storage_path": "provenance/adapter/adapter_model.safetensors",
+  "gitattributes_rule": "provenance/adapter/adapter_model.safetensors filter=lfs diff=lfs merge=lfs -text",
+  "direct_url": "https://github.com/Vicgrace01/ARIS/raw/main/provenance/adapter/adapter_model.safetensors",
   "sha256": "b5500b5603e79d055eb1baafc9d1cf4c234c2378cba9d8478ea4de974a677832",
   "size_bytes": 295488936,
   "size_human": "295.5 MB",
   "format": "safetensors (fp32)",
-  "why_not_committed": "295 MB exceeds GitHub's 100 MB per-file hard limit. Hosted on HuggingFace Hub. Verifiable by SHA-256 in this manifest.",
   "config_committed_at": "provenance/adapter/adapter_config.json",
-  "verification_command": "curl -L -o adapter_model.safetensors 'https://huggingface.co/Vicgrace/ARIS-V10.1/resolve/894c24fb6c4143acda0b3e54e26ef44b962e67a5/adapter_model.safetensors' && sha256sum adapter_model.safetensors"
+  "verification_command": "sha256sum provenance/adapter/adapter_model.safetensors",
+  "verification_expected": "b5500b5603e79d055eb1baafc9d1cf4c234c2378cba9d8478ea4de974a677832",
+  "mirror": {
+    "repo": "https://huggingface.co/Vicgrace/ARIS-V10.1",
+    "revision": "894c24fb6c4143acda0b3e54e26ef44b962e67a5",
+    "direct_url": "https://huggingface.co/Vicgrace/ARIS-V10.1/resolve/894c24fb6c4143acda0b3e54e26ef44b962e67a5/adapter_model.safetensors",
+    "note": "Pinned Hugging Face mirror provided for convenience only. The authoritative provenance artifact is the in-repo Git LFS object."
+  }
 }
