@@ -1,6 +1,6 @@
 # Technical Report — ARIS V10.1: An Offline Agronomic Advisor for Nigerian Smallholder Farmers
 
-**Team ID:** ARIS
+**Team ID:** agrigemma
 **Domain:** agriculture
 **Model:** ARIS-V10.1-1.5B-Q4_K_M
 
