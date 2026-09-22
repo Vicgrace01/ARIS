@@ -26,8 +26,8 @@ inference.
   or above.
 - **Auditable.** Every artifact a judge would want to check is committed:
   LoRA adapter metadata, per-step loss logs, training notebook, dataset
-  sample, verified fact register, SHA-256 checksums of the base model, the
-  adapter, and the final GGUF.
+  sample, verified fact register, the canonical system prompt, SHA-256
+  checksums of the base model, the adapter, and the final GGUF.
 
 **What it isn't.** A general assistant. ARIS does not answer coding questions,
 write essays, or discuss politics. It refuses these cleanly and says why.
@@ -170,6 +170,8 @@ knowledge where the base model had hallucinated an unrelated answer.
 - `dataset/` — the verification artifacts described in the Data Verification
   Methodology section: `canonical_claims.jsonl` (the verified fact register)
   and `blacklist.json` (fabrications and unsafe dosages ruled out).
+- `system_prompt.txt` — the canonical system prompt used during training and
+  evaluation. Required for reproducible inference.
 - `checksums.txt` — SHA-256 of the base model files, the adapter, and the
   final GGUF.
 - `before_after.json` — five base-vs-ARIS comparisons including the three
@@ -347,6 +349,22 @@ four back-to-back runs the throughput ranged from 11.9 to 16.2 tokens/sec
 depending on thermal state; the report cites 13.63 as the median of those
 runs. The organizers' own audit on the Standard Laptop is the authoritative
 measurement and may differ.
+
+### Deployment note: the system prompt is part of the artifact
+
+ARIS was trained and evaluated with a specific system prompt prepended to
+every conversation. The system prompt defines the model's identity,
+capabilities, and refusal behavior. Running the model without it will
+produce different output and is not the configuration the reported
+benchmarks were measured on.
+
+The canonical system prompt is committed at `provenance/system_prompt.txt`.
+Every reported accuracy figure — frozen evaluation, red team, ARC-Easy via
+the profiler — was measured with that system prompt prepended to the
+conversation. Any independent reproduction should copy it verbatim.
+
+The prompt uses ChatML format. A complete `llama-cli` invocation is
+documented in the README's "Required: The System Prompt" section.
 
 ---
 
