@@ -13,11 +13,6 @@ without re-running any training code.
 - **blacklist.json** — Assertions ruled out as fabrications, invented
   institutions, or unsafe dosages. Any candidate that matched an entry here
   was removed.
-- **conditional_register.json** — Claims that are true only under stated
-  conditions (variety, season, intercrop status). Candidates matching an
-  entry here were escalated to human review rather than admitted directly.
-- **pre_verified_subset.jsonl** — The subset of candidates that survived all
-  verification stages. Preserved for re-auditability.
 
 ## Provenance
 
