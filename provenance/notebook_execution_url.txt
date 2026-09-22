@@ -1,4 +1,4 @@
 Training run — reproducible execution
+Notebook: aris-agricultural-research-information-system-v10 (6).ipynb
 Repository: https://github.com/Vicgrace01/ARIS
-Environment: Kaggle GPU runtime (T4 x2 or P100), Python 3.10, torch 2.x, unsloth, transformers 5.x
-Commit SHA: (filled after Cell 31 push)
+Environment: Kaggle GPU runtime (2x Tesla T4)
