@@ -81,6 +81,71 @@ exists in Nigerian farming communities — not for a data centre.
 
 ---
 
+## ⚠️ Required: The System Prompt
+
+ARIS was trained and evaluated with a specific system prompt prepended to
+every conversation. The system prompt defines the model's identity,
+capabilities, and refusal behavior. **Running the model without it will
+produce different output and is not the configuration the reported
+benchmarks were measured on.**
+
+The canonical system prompt is committed at
+[`provenance/system_prompt.txt`](provenance/system_prompt.txt). Use it
+verbatim in any evaluation.
+
+### The system prompt text
+
+The canonical system prompt is:
+
+```
+You are ARIS, an offline agricultural advisor for Nigerian smallholder farmers.
+
+You have:
+- No internet access
+- No live weather data (only seasonal climate prediction)
+- No camera (you cannot see photos)
+- No live market prices
+- No ability to prescribe veterinary treatment
+
+You answer strictly from verified Nigerian agricultural sources
+(NAERLS, IITA, NRCRI, NCRI, NIHORT, NSPRI, NAPRI, NVRI, FMARD, NiMet, state ADPs).
+
+When you do not know, say "I do not know" and refer the farmer to their
+ADP extension officer, a veterinarian, or NRCRI as appropriate.
+```
+
+### How to run with the system prompt
+
+The `llama-cli` `-p` flag accepts the full ChatML-formatted prompt. The
+pattern is:
+
+```
+<|im_start|>system
+{system prompt from provenance/system_prompt.txt}<|im_end|>
+<|im_start|>user
+{user question}<|im_end|>
+<|im_start|>assistant
+```
+
+A complete command that reads the system prompt from the committed file:
+
+```bash
+SYS="$(cat provenance/system_prompt.txt)"
+llama-cli -m model/ARIS-V10.1-1.5B-Q4_K_M.gguf \
+  -p "<|im_start|>system
+${SYS}<|im_end|>
+<|im_start|>user
+My cassava leaves are showing yellow-green mosaic patterns and the plant is stunted. What disease is this and how can I manage it?<|im_end|>
+<|im_start|>assistant
+" \
+  -n 256 --temp 0.0 --threads 4 --no-display-prompt
+```
+
+Replace the user line with any question. **Keep the system line identical
+across all evaluations** so results are comparable.
+
+---
+
 ## Intended Use
 
 ARIS is built for **Nigerian smallholder farmers** and the extension
@@ -145,7 +210,9 @@ Known limitations, disclosed rather than hidden:
   both strict and tolerant rubrics.
 - **Four red-team failures in 86 seen probes.** Documented in
   `redteam_scored.json` with specific failure signatures. The unseen
-  battery (53 probes) had zero failures.
+  battery (53 probes) had zero failures, though 19 probes returned
+  responses classified as `review` rather than `pass` — the scorer could
+  not classify them cleanly.
 - **No image input.** The model cannot see photos. Diagnosis is from text
   descriptions only, and the model is trained to refuse definitive
   diagnoses from text alone.
@@ -272,24 +339,37 @@ The script fetches the GGUF from a pinned HuggingFace commit
 change after evaluation begins. SHA-256 verification is documented in
 `provenance/checksums.txt`.
 
-### Run inference
+### Run inference — strict evaluation mode
 
-**Strict evaluation mode** (deterministic, `temperature = 0.0`):
+Deterministic, `temperature = 0.0`. **Always prepend the system prompt**
+(see the top of this README):
 
 ```bash
+SYS="$(cat provenance/system_prompt.txt)"
 llama-cli -m model/ARIS-V10.1-1.5B-Q4_K_M.gguf \
-  -p "User: My cassava leaves are showing yellow-green mosaic patterns and the plant is stunted. What disease is this and how can I manage it?
-Assistant:" \
-  -n 256 --temp 0.0 --threads 4
+  -p "<|im_start|>system
+${SYS}<|im_end|>
+<|im_start|>user
+My cassava leaves are showing yellow-green mosaic patterns and the plant is stunted. What disease is this and how can I manage it?<|im_end|>
+<|im_start|>assistant
+" \
+  -n 256 --temp 0.0 --threads 4 --no-display-prompt
 ```
 
-**Conversational field mode** (`temperature = 0.7`):
+### Run inference — conversational field mode
+
+`temperature = 0.7`, sampling enabled:
 
 ```bash
+SYS="$(cat provenance/system_prompt.txt)"
 llama-cli -m model/ARIS-V10.1-1.5B-Q4_K_M.gguf \
-  -p "User: Wetin be the correct way to plant yam for rainy season?
-Assistant:" \
-  -n 256 --temp 0.7 --top-p 0.9 --threads 4
+  -p "<|im_start|>system
+${SYS}<|im_end|>
+<|im_start|>user
+Wetin be the correct way to plant yam for rainy season?<|im_end|>
+<|im_start|>assistant
+" \
+  -n 256 --temp 0.7 --top-p 0.9 --threads 4 --no-display-prompt
 ```
 
 ### Run the ADTC profiler
@@ -317,13 +397,13 @@ adtc-profiler run --submission . --mode participant --output submission.json
 │   │   ├── canonical_claims.jsonl   Verified fact register
 │   │   ├── blacklist.json           Fabrications and unsafe dosages
 │   │   └── README.md
+│   ├── system_prompt.txt          The canonical system prompt (required)
 │   ├── checksums.txt              SHA-256 of base model, adapter, GGUF
 │   ├── training_summary.json      Hyperparameters and best-checkpoint info
 │   ├── training_loss_log.csv      Per-step loss values
 │   ├── val_loss_log.csv           Per-step validation loss
 │   ├── loss_curves.png            Visualisation
 │   ├── merge_and_quantize.py      Adapter → GGUF script
-│   ├── system_prompt.txt          The canonical system prompt
 │   ├── zero_leakage_audit.md      Contamination audit + flag dispositions
 │   ├── before_after.json          Five base-vs-ARIS comparisons
 │   ├── dataset_card.md            Dataset composition and license
@@ -352,6 +432,7 @@ committed:
   `provenance/checksums.txt`
 - Training script in `provenance/merge_and_quantize.py`
 - Contamination audit in `provenance/zero_leakage_audit.md`
+- The canonical system prompt in `provenance/system_prompt.txt`
 - The full training notebook committed at repository root
 
 The base model revision is recorded in `metadata.json` under
