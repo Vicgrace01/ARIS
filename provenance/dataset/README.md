@@ -6,7 +6,7 @@ without re-running any training code.
 
 ## Files
 
-- **canonical_claims.json** — Maintained list of agronomic claims that must
+- **canonical_claims.jsonl** — Maintained list of agronomic claims that must
   never appear as unqualified fact. Each entry includes the claim, the
   category (dosage, spacing, vector, variety, institution), and the source
   citation that establishes the correct answer.
