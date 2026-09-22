@@ -1,4 +1,7 @@
 Training run — reproducible execution
-Notebook: aris-agricultural-research-information-system-v10 (6).ipynb
+Hosted notebook: https://www.kaggle.com/code/tonyanthonye/aris-agricultural-research-information-system-v10
 Repository: https://github.com/Vicgrace01/ARIS
 Environment: Kaggle GPU runtime (2x Tesla T4)
+Committed artifact: aris-agricultural-research-information-system-v10 (6).ipynb
+  (committed at repository root; full cell outputs preserved inline so the
+   training run is reviewable without a Kaggle account)
